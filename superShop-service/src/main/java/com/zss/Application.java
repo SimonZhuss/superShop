@@ -13,7 +13,11 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 import com.zss.superShop.utils.ShutDownBlockHook;
 import com.zss.superShop.utils.ShutDownHookLevel;
 
-
+/**
+ * 启动类，这个实现的接口EmbeddedServletContainerCustomizer为了修改默认端口,也可以通过修改配置文件来实现
+ * @author zhushanshan
+ *
+ */
 @SpringBootApplication(scanBasePackages = "com.zss.superShop.*")
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
 public class Application implements EmbeddedServletContainerCustomizer {
